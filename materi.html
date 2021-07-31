@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apa Itu Public API</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="container">
+        <center>
+          <h1>Apa Itu Public API</h1>
+        </center>
+      </div>
+    </header>
+    <section id="content" class="content">
+      <div class="container">
+        <!-- Apa Itu Public API -->
+        <!-- Public API / Open API / Rest API milik orang lain -->
+        <!-- sebenarnya sama saja terhubungnya ke file json, tapi jsonnya adalah hasil generate dari aplikasi public api ini -->
+        <!-- public api adalah sebuah API(REST API) yang dapat diakses secara PUBLIK, yang di dalamnya tersedia aturan untuk developer agar dapat mengakses data -->
+        <!-- contoh : api google(maps google, youtube api, dll) digoogle untuk bisa akses biasanya harus bayar = https://console.developers.google.com -->
+        <!-- contoh : api facebook(artificial intelegence, augmented reality, business tools, gaming, open source, publishing, social integrations, social presence, virtual reality) = https://developers.facebook.com -->
+        <!-- contoh public api : https://any-api.com, https://github.com/toddmotto/public-apis, https://github.com/farizdotid -->
+
+        <!-- Otentikasi (Auth) -->
+        <!-- * tanpa otentikasi -->
+        <!-- * key / token (biasanya public api ada key/tokennya untuk user bisa mengkases dan membatasi penggunaan perhari misal sebanyak 1000 kali akses, jika ingin lebih biasanya ada skema berbayar) -->
+        <!-- * OAuth = seperti saat kita ingin login ke suatu aplikasi tapi bisa login pakai akun google / facebook -->
+
+        <!-- * CORS -->
+
+        <!-- jika ingin pakai public api orang cek dulu dia otentikasinya pakai apa? -->
+        <!-- perhatikan juga CORS nya, jadi public api ini juga ada aturan CORS nya ada yang tidak bisa sembarangan diakses karena ada aturan CORSnya, aturan CORSnya biasanya ada di dokumentasi aplikasi API nya -->
+
+        <!-- Let's try -->
+        <!-- siapkan aplikasi POSTMAN untuk mencoba koneksi ke public api -->
+        <!-- buka website any-api/github toddmotto/github farizdotid untuk ambil public api -->
+        <!-- pakai yang open api website imdb yaitu OMDb dari any-api = www.omdbapi.com -->
+        <!-- dapatkan api key nya, daftar sampai dapat key is now activated -->
+        <!-- Here is your key: d8c23a72 -->
+        <!-- semua cara pemakaian, parameter sudah tertulis di websiteapi usage -->
+        <!-- send request dengan beberapa parameter = key, parameter pencarian film misalnya -->
+        <!-- parameter dengan warna hijau harus ada satu(required) -->
+
+        <!-- buka postman -->
+        <!-- new workspace -> get http request -->
+        <!-- simpan url api nya di enter request url = http://www.omdbapi.com/ -->
+        <!-- pilih http request methodnya -->
+        <!-- kalau ada parameter kirim di params = apikey d8c23a72 -->
+        <!-- parameter selanjutnya apa yang mau kita request misal cari filmnya = key : s value : harry potter -->
+        <!-- akan mengembalikan data json -->
+        <!-- http://www.omdbapi.com/?apikey=d8c23a72&s=joker = jika ini dibuka di web browser akan tampil data jsonnya, bisa diambil seperti biasa(file_get_content(), utf8_encode(), json_decode()) -->
+
+        <!-- buat tampilan homenya -->
+        <!-- input group/button add on = template bootstrap buat form pencarian -->
+        <!-- $("#tes").append("") bisa diganti dengan $("#tes").append(``) -->
+
+        <!-- buat modal box yang menampilkan detail movie -->
+        <!-- pindah trigger ke link see detail movie di js -->
+        <!-- buat ajax yang mencari data movie berdasarkan i/id (di omdb pencarian parameter i data nya lebih lengkap dibandingkan pencarian parameter s) -->
+        <!-- kirim data id imdb pakai data- supaya bisa diambil pakai js -->
+        <!-- data tidak muncul karena ada masalah yg namanya event binding/delegation materi event bubbling -->
+      </div>
+    </section>
+  </body>
+</html>
